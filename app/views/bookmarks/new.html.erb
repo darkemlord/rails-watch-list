@@ -1,0 +1,19 @@
+<div class="container d-flex justify-content-center">
+   <h1>Bookmark add!</h1>
+</div>
+<div class="container my-5">
+  <div class="d-flex justify-content-around align-items-ceter">
+  <%= link_to 'Add a new list!', new_list_path, class: 'btn btn-flat' %>
+  <%= link_to 'Back to lists', :lists, class: 'btn btn-flat' %>
+</div>
+  <div class="row justify-content-center mt-3">
+    <div class="col-12 col-sm-10 col-md-8 col-lg-6">
+      <% if @list %>
+        <h1>Movie to <%= @list.name %></h1>
+      <% elsif @movie %>
+        <h1><%= @movie.title %> to List</h1>
+      <% end %>
+      <%= render 'bookmarks/form' %>
+    </div>
+  </div>
+</div>

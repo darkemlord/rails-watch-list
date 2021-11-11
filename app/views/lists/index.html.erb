@@ -1,0 +1,38 @@
+<div class="container-fluid p-0">
+  <div class="banner">
+    <div class="container pl-5">
+      <h1>WatchList</h1>
+      <p>All your favorites in the best place</p>
+      <%= link_to 'Create List', new_list_path, class: 'btn btn-flat'%>
+    </div>
+  </div>
+</div>
+
+<div class="container d-flex justify-content-center mt-5">
+  <h1>My lists</h1>
+</div>
+
+<div class="container mt-3 d-flex flex-wrap justify-content-center">
+<% @lists.each do |list| %>
+  <div class="container-fluid col-4 mt-3 mb-3" >
+    <div class="card-category">
+    <% if File.exist?("app/assets/images/#{list.name.downcase}.jpeg") %>
+      <%= image_tag ("#{list.name.downcase}.jpeg") %>
+    <% else %>
+      <%= image_tag "https://image.freepik.com/foto-gratis/disposicion-elementos-pelicula-sobre-fondo-negro_23-2148416799.jpg" %>
+    <% end %>
+    <%= link_to list_path(list) do%>
+      <h2><%= list.name %></h2>
+    <% end %>
+    </div>
+  </div>
+ <% end %>
+   <div class="container-fluid col-4 mt-3 mb-3" >
+    <div class="card-category">
+      <%= image_tag "https://image.freepik.com/foto-gratis/disposicion-elementos-pelicula-sobre-fondo-negro_23-2148416799.jpg" %>
+    <%= link_to new_list_path do%>
+      <h2>Add list!</h2>
+    <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+.card-category {
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 4rem;
+  border-radius: 5px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+
+  img{
+    border-radius: 5px;
+    height: 100%;
+    width: 95%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    text-shadow: 3px 1px 5px rgba(150, 150, 150, 0.1);
+    margin: 0;
+  }
+}

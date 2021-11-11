@@ -1,0 +1,14 @@
+<div class="container d-flex justify-content-center">
+   <h1>List add!</h1>
+</div>
+<div class="container">
+  <div class="d-flex justify-content-around align-items-ceter">
+  <%= link_to 'Back to lists', :lists, class: 'btn btn-flat' %>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-12 col-sm-10 col-md-8 col-lg-6">
+      <h1>List</h1>
+      <%= render 'lists/form' %>
+    </div>
+  </div>
+</div>

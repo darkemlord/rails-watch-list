@@ -11,3 +11,30 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+@import url('http://fonts.cdnfonts.com/css/stallions');
+@import url('http://fonts.cdnfonts.com/css/cinematografica');
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300&display=swap');
+
+$dark: #000100;
+a{
+  color: white;
+  &:hover{
+    text-decoration: none;
+    color: rgb(224, 214, 214);
+  }
+}
+
+h1{
+  font-size: 5rem;
+}
+h1, h2, h3{
+  font-family: 'Cinematografica', sans-serif;
+}
+
+
+body{
+  background-color: $dark ;
+  color: white;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
