@@ -18,7 +18,7 @@
     <div class="card-category">
     <% if File.exist?("app/assets/images/#{list.name.downcase}.jpg") %>
       <%= image_tag("#{list.name.downcase}.jpg") %>
-    <% elsif list.photo.key %>
+    <% elsif list.photo.attached? %>
       <%= cl_image_tag list.photo.key %>
     <% else %>
       <%= image_tag "https://image.freepik.com/foto-gratis/disposicion-elementos-pelicula-sobre-fondo-negro_23-2148416799.jpg" %>
