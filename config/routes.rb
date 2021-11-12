@@ -6,4 +6,3 @@ Rails.application.routes.draw do
   end
   resources :bookmarks, only: :destroy
 end
-ß
